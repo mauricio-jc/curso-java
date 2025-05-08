@@ -1,0 +1,65 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Pessoa;
+import entities.PessoaFisica;
+import entities.PessoaJuridica;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
+		double totalImposto = 0.00;
+		
+		System.out.print("Informe o número de contribuintes: ");
+		int n = sc.nextInt();
+		sc.nextLine();
+		
+		for(int i = 1; i <= n; i++) {
+			System.out.println("Dados do contribuinte #" + i);
+			
+			System.out.print("Pessoa física ou jurídica (f / j)? ");
+			char tipo = sc.next().charAt(0);
+			sc.nextLine();
+			
+			System.out.print("Nome: ");
+			String nome = sc.nextLine();
+			
+			System.out.print("Renda anual: ");
+			double rendaAnual = sc.nextDouble();
+			
+			if(tipo == 'f') {
+				System.out.print("Gastos com saúde: ");
+				double gastosComSaude = sc.nextDouble();
+
+				pessoas.add(new PessoaFisica(nome, rendaAnual, gastosComSaude));
+			}
+			else {
+				System.out.print("Número de funcionários: ");
+				int numeroFuncionarios = sc.nextInt();
+				sc.nextLine();
+				
+				pessoas.add(new PessoaJuridica(nome, rendaAnual, numeroFuncionarios));
+			}
+		}
+		
+		System.out.println("------------------------------");
+		System.out.println("Impostos pagos:");
+		
+		for(Pessoa pessoa: pessoas) {
+			double imposto = pessoa.calcularImposto();
+			System.out.println(pessoa.getNome() + ": $ " + String.format("%.2f", imposto));
+			totalImposto = totalImposto + imposto;
+		}
+		
+		System.out.println("------------------------------");
+		System.out.println("Total de impostos: $ " + String.format("%.2f", totalImposto));
+		sc.close();
+	}
+}

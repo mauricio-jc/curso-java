@@ -1,0 +1,38 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Informe a quantidade da matriz: ");
+		int n = sc.nextInt();
+		int numerosNegativos = 0;
+		
+		int[][] mat = new int[n][n];
+		
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print("Informe o elemento da linha " + (i + 1) + " e da coluna " + (j + 1) + ": ");
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		
+		System.out.println("Diagonal principal:");
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if(i == j) {
+					System.out.print(mat[i][j] + " ");
+				}
+			}
+		}
+		
+		System.out.print("Quantidade de números negativos: ");
+		
+		sc.close();
+	}
+}

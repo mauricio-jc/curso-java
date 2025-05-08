@@ -1,0 +1,15 @@
+package entities;
+
+public class ContaPoupancaPlus {
+	private Double bonus;
+	
+	public ContaPoupancaPlus() {}
+
+	public Double getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(Double bonus) {
+		this.bonus = bonus;
+	}
+}

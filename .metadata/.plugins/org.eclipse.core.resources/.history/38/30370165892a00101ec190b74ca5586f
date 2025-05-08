@@ -1,0 +1,23 @@
+package application;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Calendar cal = Calendar.getInstance();
+		
+		System.out.print("Informe a data (DD/MM/YYYY): ");
+		String date = sc.next();
+		
+		System.out.println(date);
+		
+		
+		sc.close();
+	}
+}

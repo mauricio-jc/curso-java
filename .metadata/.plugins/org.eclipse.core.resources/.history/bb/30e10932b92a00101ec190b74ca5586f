@@ -1,0 +1,11 @@
+package application;
+
+import entities.Conta;
+import entities.ContaEmpresarial;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Conta conta = new Conta(1001, "Alex", 0.00);	
+	}
+}

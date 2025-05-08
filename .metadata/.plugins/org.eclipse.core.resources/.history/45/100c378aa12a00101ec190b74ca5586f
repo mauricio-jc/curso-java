@@ -1,0 +1,25 @@
+package application;
+
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Informe os dados do cliente:");
+		System.out.print("Nome: ");
+		String name = sc.nextLine();
+		
+		System.out.print("E-mail: ");
+		String email = sc.nextLine();
+		
+		System.out.print("Data de nascimento: ");
+		Date birthDate = sc.nextLine();
+		
+		sc.close();
+	}
+}

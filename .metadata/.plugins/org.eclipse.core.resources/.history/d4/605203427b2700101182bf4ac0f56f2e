@@ -1,0 +1,55 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Pessoa;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Quantas pessoas serao digitadas? ");
+		int n = sc.nextInt();
+		double menorAltura = 0;
+		double maiorAltura = 0;
+		double somaAlturaMulheres = 0;
+		int quantidadeHomens = 0;
+		Pessoa[] pessoa = new Pessoa[n];
+		sc.nextLine();
+		
+		for(int i = 0; i < pessoa.length; i++) {
+			System.out.print("Altura da " + (i + 1) + "a pessoa: ");
+			double altura = sc.nextDouble();
+			
+			System.out.print("Genero da " + (i + 1) + "a pessoa: ");
+			char genero = sc.next().charAt(0);
+			
+			pessoa[i] = new Pessoa(altura, genero);
+			
+			if(pessoa[i].getGenero() == 'M') {
+				quantidadeHomens++;
+			}
+			else {
+				somaAlturaMulheres = somaAlturaMulheres + pessoa[i].getAltura();
+			}
+			
+			if(pessoa[i].getAltura() > menorAltura) {
+				menorAltura = pessoa[i].getAltura();
+			}
+			
+			if(pessoa[i].getAltura() > maiorAltura) {
+				maiorAltura = pessoa[i].getAltura();
+			}
+		}
+		
+		System.out.printf("Menor altura = %.2f%n", menorAltura);
+		System.out.printf("Maior altura = %.2f%n", maiorAltura);
+		//Media das alturas das mulheres = 1.69
+		System.out.println("Número de homens = " +  quantidadeHomens); 
+		
+		sc.close();
+	}
+}

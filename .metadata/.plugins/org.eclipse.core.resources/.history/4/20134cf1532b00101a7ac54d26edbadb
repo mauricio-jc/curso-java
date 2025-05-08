@@ -1,0 +1,85 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.Conta;
+import entities.ContaEmpresarial;
+import entities.ContaPoupanca;
+
+public class Program {
+
+	public static void main(String[] args) {
+//		Conta conta1 = new Conta(1001, "Alex", 0.00);
+//		ContaEmpresarial contaEmpresarial1 = new ContaEmpresarial(1002, "Maria", 0.00, 500.00);
+//		
+//		// Upcasting
+//		Conta conta2 = contaEmpresarial1;
+//		Conta conta3 = new ContaEmpresarial(1003, "Bob", 0.00, 200.00);
+//		Conta conta4 = new ContaPoupanca(1004, "Ana", 0.00, 0.01);
+//		
+//		// Downcasting
+//		ContaEmpresarial contaEmpresarial2 = (ContaEmpresarial) conta3;
+//		contaEmpresarial2.emprestimo(100);
+//		
+//		if(conta4 instanceof ContaEmpresarial) {
+//			ContaEmpresarial contaEmpresarial3 = (ContaEmpresarial) conta4;
+//		}
+//		
+//		if(conta4 instanceof ContaPoupanca) {
+//			ContaPoupanca contaPoupanca1 = (ContaPoupanca) conta4;
+//		}
+//		
+//		Conta contaNormal = new Conta(0001, "Alex", 1000.00);
+//		contaNormal.sacar(200);
+//		System.out.println(contaNormal.getSaldo());
+//		
+//		ContaPoupanca poupanca = new ContaPoupanca(0002, "Maria", 1000.00, 0.01);
+//		poupanca.sacar(200);
+//		System.out.println(poupanca.getSaldo());
+//		
+//		ContaEmpresarial empresarial = new ContaEmpresarial(0003, "Bob", 1000.00, 500.00);
+//		empresarial.sacar(200);
+//		System.out.println(empresarial.getSaldo());
+		
+//		Conta x = new Conta(1001, "Alex", 1000.00);
+//		Conta y = new ContaPoupanca(1002, "Maria", 1000.00, 0.01);
+//		
+//		x.sacar(50);
+//		y.sacar(50);
+//		
+//		System.out.println(x.getSaldo());
+//		System.out.println(y.getSaldo());
+		
+		List<Conta> contas = new ArrayList<Conta>();
+		
+		contas.add(new ContaPoupanca(1001, "Alex", 500.00, 0.01));
+		contas.add(new ContaEmpresarial(1002, "Maria", 1000.00, 400.00));
+		contas.add(new ContaPoupanca(1003, "Bob", 1500.00, 0.01));
+		contas.add(new ContaPoupanca(1004, "Fulano", 2000.00, 0.07));
+		contas.add(new ContaEmpresarial(1005, "Ciclano", 2800.00, 600.00));
+		
+		double sum = 0;
+		
+		for(Conta conta: contas) {
+			sum = sum + conta.getSaldo();
+		}
+		
+		System.out.print("Saldo total: $ %.2f%n", sum);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

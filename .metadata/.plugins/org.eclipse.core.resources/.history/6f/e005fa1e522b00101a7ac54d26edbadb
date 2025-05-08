@@ -1,0 +1,51 @@
+package application;
+
+import entities.Conta;
+import entities.ContaEmpresarial;
+import entities.ContaPoupanca;
+
+public class Program {
+
+	public static void main(String[] args) {
+//		Conta conta1 = new Conta(1001, "Alex", 0.00);
+//		ContaEmpresarial contaEmpresarial1 = new ContaEmpresarial(1002, "Maria", 0.00, 500.00);
+//		
+//		// Upcasting
+//		Conta conta2 = contaEmpresarial1;
+//		Conta conta3 = new ContaEmpresarial(1003, "Bob", 0.00, 200.00);
+//		Conta conta4 = new ContaPoupanca(1004, "Ana", 0.00, 0.01);
+//		
+//		// Downcasting
+//		ContaEmpresarial contaEmpresarial2 = (ContaEmpresarial) conta3;
+//		contaEmpresarial2.emprestimo(100);
+//		
+//		if(conta4 instanceof ContaEmpresarial) {
+//			ContaEmpresarial contaEmpresarial3 = (ContaEmpresarial) conta4;
+//		}
+//		
+//		if(conta4 instanceof ContaPoupanca) {
+//			ContaPoupanca contaPoupanca1 = (ContaPoupanca) conta4;
+//		}
+//		
+//		Conta contaNormal = new Conta(0001, "Alex", 1000.00);
+//		contaNormal.sacar(200);
+//		System.out.println(contaNormal.getSaldo());
+//		
+//		ContaPoupanca poupanca = new ContaPoupanca(0002, "Maria", 1000.00, 0.01);
+//		poupanca.sacar(200);
+//		System.out.println(poupanca.getSaldo());
+//		
+//		ContaEmpresarial empresarial = new ContaEmpresarial(0003, "Bob", 1000.00, 500.00);
+//		empresarial.sacar(200);
+//		System.out.println(empresarial.getSaldo());
+		
+//		Conta x = new Conta(1001, "Alex", 1000.00);
+//		Conta y = new ContaPoupanca(1002, "Maria", 1000.00, 0.01);
+//		
+//		x.sacar(50);
+//		y.sacar(50);
+//		
+//		System.out.println(x.getSaldo());
+//		System.out.println(y.getSaldo());
+	}
+}

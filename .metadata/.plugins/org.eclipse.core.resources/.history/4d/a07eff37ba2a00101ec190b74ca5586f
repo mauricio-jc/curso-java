@@ -1,0 +1,21 @@
+package application;
+
+import entities.Conta;
+import entities.ContaEmpresarial;
+import entities.ContaPoupanca;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Conta conta1 = new Conta(1001, "Alex", 0.00);
+		ContaEmpresarial contaEmpresarial1 = new ContaEmpresarial(1002, "Maria", 0.00, 500.00);
+		
+		// Upcasting
+		Conta conta2 = contaEmpresarial1;
+		Conta conta3 = new ContaEmpresarial(1003, "Bob", 0.00, 200.00);
+		Conta conta4 = new ContaPoupanca(1004, "Ana", 0.00, 0.01);
+		
+		// Downcasting
+		ContaEmpresarial contaEmpresarial2 = conta3;
+	}
+}

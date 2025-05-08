@@ -1,0 +1,20 @@
+package entities;
+
+public class ContaPoupancaPlus extends ContaPoupanca {
+	private Double bonus;
+	
+	public ContaPoupancaPlus() {}
+	
+	public ContaPoupancaPlus(Double bonus) {
+		super();
+		this.bonus = bonus;
+	}
+	
+	public Double getBonus() {
+		return bonus;
+	}
+
+	public void setBonus(Double bonus) {
+		this.bonus = bonus;
+	}
+}

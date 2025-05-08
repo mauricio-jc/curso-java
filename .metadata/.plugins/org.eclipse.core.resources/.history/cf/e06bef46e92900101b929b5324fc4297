@@ -1,0 +1,26 @@
+package application;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class App {
+
+	public static void main(String[] args) {
+		LocalDate d04 = LocalDate.parse("2025-05-05");
+		LocalDateTime d05 = LocalDateTime.parse("2025-04-28T14:10:20");
+		LocalDateTime d06 = LocalDateTime.parse("2025-05-05T14:10:20");
+		Instant d07 = Instant.parse("2025-05-05T01:30:30Z");
+		
+		LocalDate semanaAnterior = d04.minusWeeks(1);
+		LocalDate proximaSemana = d04.plusDays(7);
+		
+		System.out.println("semanaAnterior = " + semanaAnterior);
+		System.out.println("proximaSemana = " + proximaSemana);
+		
+		Duration t1 = Duration.between(d05, d06);
+		
+		System.out.println("t1 = " + t1.toDays());
+	}
+}

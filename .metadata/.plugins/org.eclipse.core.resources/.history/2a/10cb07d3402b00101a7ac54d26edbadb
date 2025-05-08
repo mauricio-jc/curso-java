@@ -1,0 +1,7 @@
+package entities;
+
+public final class OutsourcedEmployee extends Employee {
+	private Double additionalCharge;
+	
+	
+}

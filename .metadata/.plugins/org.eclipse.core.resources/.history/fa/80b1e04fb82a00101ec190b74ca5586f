@@ -1,0 +1,12 @@
+package application;
+
+import entities.ContaEmpresarial;
+
+public class Program {
+
+	public static void main(String[] args) {
+		ContaEmpresarial contaEmpresarial = new ContaEmpresarial();
+		
+		contaEmpresarial.sacar(1000);	
+	}
+}

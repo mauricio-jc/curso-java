@@ -1,0 +1,13 @@
+package entities;
+
+public class ContaPoupanca extends Conta {
+	private Double taxaJuros;
+	
+	public ContaPoupanca() {
+		super();
+	}
+	
+	
+	
+	public void atualizarSaldo() {}
+}

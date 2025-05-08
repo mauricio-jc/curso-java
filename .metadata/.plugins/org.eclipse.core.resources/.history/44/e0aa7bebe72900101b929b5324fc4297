@@ -1,0 +1,16 @@
+package application;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class App {
+
+	public static void main(String[] args) {
+		LocalDate d04 = LocalDate.parse("2025-05-05");
+		LocalDateTime d05 = LocalDateTime.parse("2025-05-05T14:10:20");
+		Instant d06 = Instant.parse("2025-05-05T01:30:30Z");
+		
+		LocalDate semanaAnterior = d04.minusWeeks(1);
+	}
+}

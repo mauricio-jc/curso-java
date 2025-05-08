@@ -1,0 +1,9 @@
+package entities;
+
+public class ContaPoupancaPlus extends ContaPoupanca {
+	
+	@Override
+	public final void sacar(double valor) {
+		saldo = saldo - (valor + 2);
+	}
+}

@@ -1,0 +1,15 @@
+package entities;
+
+public class PessoaJuridica extends Pessoa {
+
+	public PessoaJuridica() {
+		super()
+	}
+	
+	@Override
+	public double calcularImposto() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

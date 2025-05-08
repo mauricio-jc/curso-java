@@ -1,0 +1,9 @@
+package entities;
+
+public class ContaPoupancaPlus {
+	private Double bonus;
+	
+	public ContaPoupancaPlus() {}
+	
+	
+}

@@ -1,0 +1,13 @@
+package entities;
+
+public class Rectangle extends Shape {
+	private Double width;
+	private Double height;
+	
+	@Override
+	public double area() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,28 @@
+package entities;
+
+public class ContaEmpresarial extends Conta {
+	private Double loanLimit;
+
+	public ContaEmpresarial() {
+		super();
+	}
+
+	public ContaEmpresarial(Integer numero, String titular, Double saldo, Double loanLimit) {
+		super(numero, titular, titular);
+		this.loanLimit = loanLimit;
+	}
+
+	public Double getLoanLimit() {
+		return loanLimit;
+	}
+
+	public void setLoanLimit(Double loanLimit) {
+		this.loanLimit = loanLimit;
+	}
+	
+	public void loan(double amount) {
+		if(amount <= loanLimit) {
+			balance = balance + (amount - 10);
+		}		
+	}
+}

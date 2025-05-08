@@ -1,0 +1,18 @@
+package entities;
+
+public class Circle extends Shape {
+	private Double radius;
+	
+	public Circle() {
+		super();
+	}
+	
+	
+
+	@Override
+	public double area() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

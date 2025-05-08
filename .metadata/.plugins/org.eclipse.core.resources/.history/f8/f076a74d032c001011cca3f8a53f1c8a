@@ -1,0 +1,8 @@
+package entities;
+
+public class Pessoa {
+	private String nome;
+	private Double rendaAnual;
+	
+	public Pessoa() {}
+}

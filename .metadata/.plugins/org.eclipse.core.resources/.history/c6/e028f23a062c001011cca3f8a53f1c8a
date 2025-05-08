@@ -1,0 +1,44 @@
+package entities;
+
+public class PessoaFisica extends Pessoa {
+	private Double gastosComSaude = 0.00;
+	
+	public PessoaFisica() {
+		super();
+	}
+		
+	public PessoaFisica(String nome, Double rendaAnual, Double gastosComSaude) {
+		super(nome, rendaAnual);
+		this.gastosComSaude = gastosComSaude;
+	}
+
+	public Double getGastosComSaude() {
+		return gastosComSaude;
+	}
+
+	public void setGastosComSaude(Double gastosComSaude) {
+		this.gastosComSaude = gastosComSaude;
+	}
+
+	@Override
+	public double calcularImposto() {
+//		Pessoa física: pessoas cuja renda foi abaixo de 20000.00 pagam 15% de imposto. Pessoas com
+//		renda de 20000.00 em diante pagam 25% de imposto. Se a pessoa teve gastos com saúde, 50%
+//		destes gastos são abatidos no imposto.
+//		Exemplo: uma pessoa cuja renda foi 50000.00 e teve 2000.00 em gastos com saúde, o imposto
+//		fica: (50000 * 25%) - (2000 * 50%) = 11500.00
+		
+		double rendaAnual = super.getRendaAnual();
+		double imposto = (rendaAnual < 20000.00) ? rendaAnual * 0.15 : rendaAnual * 0.25; 
+		
+		if(gastosComSaude > 0.00) {
+			
+		}
+		else {
+			 
+		}
+		
+		return 0;
+	}
+
+}

@@ -1,0 +1,8 @@
+package entities;
+
+public class Estudante {
+	private String nome;
+	private String email;
+	
+	
+}

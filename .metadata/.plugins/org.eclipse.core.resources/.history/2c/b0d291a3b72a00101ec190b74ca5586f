@@ -1,0 +1,43 @@
+package entities;
+
+public class Conta {
+	private Integer numero;
+	private String titular;
+	protected Double saldo;
+	
+	public Conta() {}
+
+	public Conta(Integer numero, String titular, Double balance) {
+		this.numero = numero;
+		this.titular = titular;
+		this.saldo = saldo;
+	}
+
+	public Integer getNumero() {
+		return titular;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
+	public String getHolder() {
+		return titular;
+	}
+
+	public void setHolder(String holder) {
+		this.holder = holder;
+	}
+
+	public Double getBalance() {
+		return balance;
+	}
+	
+	public void withdraw(double amount) {
+		balance = balance - amount;
+	}
+	
+	public void deposit(double amount) {
+		balance = balance + amount;
+	}
+}

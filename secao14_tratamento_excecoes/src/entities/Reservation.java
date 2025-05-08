@@ -49,7 +49,7 @@ public class Reservation {
 		return "Quarto " +
 				roomNumber + ", check-in: " +
 				simpleDateFormat.format(checkIn) + ", check-out: " +
-				simpleDateFormat.format(checkOut) + ", duration: " +
+				simpleDateFormat.format(checkOut) + ", duração: " +
 				duration() + " noites";
 	}
 }

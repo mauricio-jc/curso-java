@@ -1,8 +1,0 @@
-package entities;
-
-public class User {
-	private nome;
-	private idade;
-	
-	
-}

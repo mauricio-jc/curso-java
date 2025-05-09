@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="entities.BankAccount"/>
     <fullyQualifiedTypeName name="double"/>
     <fullyQualifiedTypeName name="entities.User"/>
     <fullyQualifiedTypeName name="entities.Aluno"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="model.services.RentalService"/>
     <fullyQualifiedTypeName name="model.services.BrazilTaxService"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="model.services.TaxService"/>
 </qualifiedTypeNameHistroy>

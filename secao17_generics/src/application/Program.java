@@ -15,7 +15,7 @@ public class Program {
 		int quantity = sc.nextInt();
 		sc.nextLine();
 		
-		PrintService ps = new PrintService();
+		PrintService<Integer> ps = new PrintService<Integer>();
 		
 		for(int i = 1; i <= quantity; i++) {
 			System.out.print("Informe o número #" + i + ": ");

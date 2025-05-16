@@ -9,13 +9,10 @@ import model.entities.Seller;
 
 public class Program {
 
-	public static void main(String[] args) {
-		Department department = new Department(1, "TI");
-		System.out.println(department);
-		
-		Seller seller = new Seller(1, "Fulano", "fulano@email.com", new Date(), 10000.0, department);
-		
+	public static void main(String[] args) {		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		Seller seller = sellerDao.findById(1);
 		
 		System.out.println(seller);
 	}

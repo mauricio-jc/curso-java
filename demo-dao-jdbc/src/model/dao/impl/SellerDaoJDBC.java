@@ -48,6 +48,8 @@ public class SellerDaoJDBC implements SellerDao {
 					int id = rs.getInt(1);
 					seller.setId(id);
 				}
+				
+				DB.closeResultSet(rs);
 			}
 			else {
 				throw new DbException("Unesxpected error! No rows affected!");

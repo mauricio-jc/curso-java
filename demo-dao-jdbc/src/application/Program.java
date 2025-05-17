@@ -5,6 +5,7 @@ import java.util.List;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
+import model.dao.impl.SellerDaoJDBC;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -47,5 +48,16 @@ public class Program {
 		
 		System.out.println("Created! ID: " + newSeller.getId());
 		System.out.println("=== TESTE 4: Seller insert ===");
+		
+		System.out.println();
+		
+		System.out.println("=== TESTE 4: Seller update ===");
+		
+		seller = sellerDao.findById(1);
+		seller.setName("Fulano");
+		sellerDao.update(seller);
+		System.out.println("Updated!");
+		
+		System.out.println("=== TESTE 4: Seller update ===");
 	}
 }
